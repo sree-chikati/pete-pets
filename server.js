@@ -6,10 +6,10 @@ if (!process.env.PORT) {
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
-const logger = require('morgan');
+const logger = require('morgan'); //simplifies the process of logging requests to app
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override') //Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it
 
 const app = express();
 
