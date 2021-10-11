@@ -37,7 +37,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+// STRIPE KEY
+app.locals.PUBLIC_STRIPE_API_KEY = process.env.PUBLIC_STRIPE_API_KEY
 
+// Routes
 require('./routes/index.js')(app);
 require('./routes/pets.js')(app);
 
