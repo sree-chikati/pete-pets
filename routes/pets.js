@@ -23,10 +23,6 @@ const client = new Upload(process.env.S3_BUCKET, {
     maxWidth: 400,
     aspect: '16:10',
     suffix: '-standard'
-  },{
-    maxWidth: 300,
-    aspect: '1:1',
-    suffix: '-square'
   }]
 });
 
@@ -42,7 +38,6 @@ module.exports = (app) => {
 
   // CREATE PET
   app.post('/pets', upload.single('avatar'), (req, res, next) => {
-    console.log(req.file);
     var pet = new Pet(req.body);
     pet.save(function (err) {
       if (req.file) {
@@ -65,9 +60,6 @@ module.exports = (app) => {
       } else {
         res.send({ pet: pet });
       }
-      if (err) {
-				console.log(err);
-			}
     })
   })
 
