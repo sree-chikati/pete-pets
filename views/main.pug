@@ -1,0 +1,99 @@
+extends layout
+
+block content
+    .banner
+        <div class="row text-light py-2">
+            <div class="col-12 text-center">
+                <img class="p-2" src="/images/Logo.png" alt="Logo" width="150", height="150">
+                <h1>Noveltea</h1>
+                <h4 class="py-4">A place of novelty for book lovers</h4>
+            </div>
+        </div>
+        
+
+    //- End Main Content    
+
+    //- GUIDE 
+    <div class="guide">
+        <div class="container my-5 text-center">
+            //- cards three 
+            <div class="container">
+                <div class="row p-4">
+                //-   cards one
+                <div class="col-lg-4 mb-4 my-lg-auto">
+                    <h4 class="my-4">Find your Books</h4>
+                    <p>Looking for a book? Search no more. With the Google API all the books are availabe here.</p>
+                </div>
+                <div class="col-lg-8" id = "contentBx">
+                    <img src="/images/book2.png" alt="" class="p-4 w-100">
+                </div>
+                //-   end cards one 
+                
+                //-   cards two 
+                <div class="col-lg-8" id = "contentBx">
+                    <img src="/images/tea2.png" alt="" class="p-4 w-100">
+                </div>
+                <div class="col-lg-4 mb-4 my-lg-auto">
+                    <h4 class="my-4">Find your Community</h4>
+                    <p>Looking for your fandom? This can be the most difficult task when not knowing where your folks are discussing the latest book. Well now it's possible here!</p>
+                </div>
+                //-   end cards two
+            </div>
+        </div>
+    </div>
+                
+    //- FANDOM 
+    <div class="cards">
+        <div class="container my-5">
+            <div class="col-12 text-center mt-5">
+                <h1 class="text-dark pt-4">Top Fandoms<br></h1>
+                <div class="border-top border-primary w-50 mx-auto my-3"></div>
+                <p class="mb-5">These are out most active and popular fandoms </p>
+                //- cards three 
+                <div class="container">
+                    <div class="row">
+                        //- cards one
+                        <div class="col-md-4" id = "contentBx">
+                            <img src="/images/harry1.png" alt="" class="w-100">
+                            <h4 class="my-4">Harry Potter</h4>
+                            <p>Fandom Name: Potterheads</p>
+                        </div>
+                        //- end cards one 
+                        
+                        //- cards two 
+                        <div class="col-md-4" id = "contentBx">
+                            <img src="/images/hunger1.png" alt="" class="w-100">
+                            <h4 class="my-4">Hunger Games</h4>
+                            <p>Fandom Name: Tributes</p>
+                        </div>
+                        //- end cards two
+
+                        //- cards three 
+                        <div class="col-md-4" id = "contentBx">
+                            <img src="/images/percy1.png" alt="" class="w-100">
+                            <h4 class="my-4">Percy Jackson</h4>
+                            <p>Fandsom Name: Demigods</p>
+                        </div>
+                        //- end cards three 
+                </div>
+            </div>
+        </div>
+    </div>
+    //- End cards 
+
+    //-   JUMBOTRON 
+    <div class="jumbotron py-5 mb-0">
+        <div class="container">
+            <div class="row">
+
+            <div class="col-md-7 col-lg-8 col-xl-9 my-auto">
+                <h4>Join the community now!</h4>
+            </div>
+
+            <div class="col-md-5 col-lg-4 col-xl-3 pt-md-0">
+                <a href="{{ url_for('signup') }}" class="btn btn-primary btn-md">Sign Up</a>
+            </div>
+
+            </div>
+        </div>
+    </div>
