@@ -1,21 +1,21 @@
 extends layout
 
 block content
-    
-  .row.justify-content-center
-    .col-sm-6
-      legend New Pet
-      form(action="#" id="new-pet")
-        .form-group
-            label Title
-            input.form-control(name="name" required)
-        .form-group
-            label Fandom
-            input.form-control(name="species" required)
-        .form-group
-            label Avatar
-            input.form-control(name="avatar" type="file" required)
-        .form-group
-            label Description
-            textarea.form-control(name="description" required minlength="140")   
-        button(type="submit").btn.btn-primary Save
+  .container.p-4
+    .row.justify-content-center
+      .col-sm-6
+        legend New Pet
+        form(action="#" id="new-pet")
+          .form-group
+              label Title
+              input.form-control(name="name" required)
+          .form-group
+              label Fandom
+              input.form-control(name="species" required)
+          .form-group
+              label Avatar
+              input.form-control(name="avatar" type="file" required)
+          .form-group
+              label Description
+              textarea.form-control(name="description" required minlength="140")   
+          button(type="submit").btn.btn-primary Save

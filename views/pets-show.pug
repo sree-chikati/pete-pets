@@ -1,60 +1,62 @@
 extends layout
 
 block content
-
-  <div class="card">
-    //- Header
-    <div class="card-header p-3">
-      <div class="d-flex flex-row align-items-center">
-          <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-secondary post-profile-photo mr-3">
-            <img src="/images/Logo.png" alt="" width="30", height="30">
+  .container
+    .row-12.p-5
+      .col-12
+        <div class="card">
+          //- Header
+          <div class="card-header p-3">
+            <div class="d-flex flex-row align-items-center">
+                <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-secondary post-profile-photo mr-3">
+                  <img src="/images/Logo.png" alt="" width="30", height="30">
+                </div>
+                <span class="font-weight-bold">noveltea</span>
+            </div>
           </div>
-          <span class="font-weight-bold">noveltea</span>
-      </div>
-    </div>
-    //- Header end
+          //- Header end
 
-    //- Main
-    <div class="card-main p-0">
-      //- image
-      <div class="post-image">
-        if pet.avatarUrl
-          img.card-img-top(src=pet.avatarUrl + '-standard.', alt='Card image cap')
-        else
-          img.card-img-top(src=pet.picUrl, alt='Card image cap')
-      </div>
-      //- like, comment, etc.
-      <div class="d-flex flex-row justify-content-between pl-3 pr-3 pt-3 pb-1">
-        <ul class="list-inline d-flex flex-row align-items-center m-0">
-          <li class="list-inline-item">
-            <button class="btn p-0">
-            <i class="far fa-heart fa-2x"></i>
-            </button>
-          </li>
-          <li class="list-inline-item ml-2">
-            <button class="btn p-0">
-            <i class="far fa-comment fa-2x"></i>
-            </button>
-          </li>
-          <li class="list-inline-item ml-2">
-            <button class="btn p-0">
-            <i class="far fa-share-square fa-2x"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
+          //- Main
+          <div class="card-main p-0">
+            //- image
+            <div class="post-image">
+              if pet.avatarUrl
+                img.card-img-top(src=pet.avatarUrl + '-standard.', alt='Card image cap')
+              else
+                img.card-img-top(src=pet.picUrl, alt='Card image cap')
+            </div>
+            //- like, comment, etc.
+            <div class="d-flex flex-row justify-content-between pl-3 pr-3 pt-3 pb-1">
+              <ul class="list-inline d-flex flex-row align-items-center m-0">
+                <li class="list-inline-item">
+                  <button class="btn p-0">
+                  <i class="far fa-heart fa-2x"></i>
+                  </button>
+                </li>
+                <li class="list-inline-item ml-2">
+                  <button class="btn p-0">
+                  <i class="far fa-comment fa-2x"></i>
+                  </button>
+                </li>
+                <li class="list-inline-item ml-2">
+                  <button class="btn p-0">
+                  <i class="far fa-share-square fa-2x"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
 
-      //- Body
-      <div class="pl-3 pr-3 pb-2">
-        strong.d-block.mb-1.card-title= pet.name
-        strong.p.card-text= pet.species
-        p.card-text= pet.description
-        <button class="btn p-0">
-          a(href="/pets/" + pet.id + "/edit").btn-link Edit
-        </button>
-      </div>
-    </div>
-  </div>
+            //- Body
+            <div class="pl-3 pr-3 pb-2">
+              strong.d-block.mb-1.card-title= pet.name
+              strong.p.card-text= pet.species
+              p.card-text= pet.description
+              <button class="btn p-0">
+                a(href="/pets/" + pet.id + "/edit").btn-link Edit
+              </button>
+            </div>
+          </div>
+        </div>
 
 //- 
   .row

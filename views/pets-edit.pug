@@ -1,24 +1,24 @@
 extends layout
 
 block content
-    
-    .row.justify-content-center
-        .col-sm-6
-            legend New Pet
-            form(action=`/pets/${pet._id}?_method=PUT`, method="POST")
-                .form-group
-                    label Title
-                    input.form-control(name="name" value=pet.name)   
-                .form-group
-                    label Fandom
-                    input.form-control(name="species" value=pet.species)    
-                .form-group
-                    label Avatar
-                    input.form-control(name="avatar" type="file" value=pet.picUrl)   
-                .form-group
-                    label Description
-                    textarea.form-control(name="description")= pet.description
-                button(type="submit").btn.btn-primary Save
-            .text-right
-                form(action=`/pets/${pet._id}?_method=DELETE`, method="POST")
-                    button(type="submit").btn.btn-danger Remove
+    .container.p-4
+        .row.justify-content-center
+            .col-sm-6
+                legend New Pet
+                form(action=`/pets/${pet._id}?_method=PUT`, method="POST")
+                    .form-group
+                        label Title
+                        input.form-control(name="name" value=pet.name)   
+                    .form-group
+                        label Fandom
+                        input.form-control(name="species" value=pet.species)    
+                    .form-group
+                        label Avatar
+                        input.form-control(name="avatar" type="file" value=pet.picUrl)   
+                    .form-group
+                        label Description
+                        textarea.form-control(name="description")= pet.description
+                    button(type="submit").btn.btn-primary Save
+                .text-right.p-4
+                    form(action=`/pets/${pet._id}?_method=DELETE`, method="POST")
+                        button(type="submit").btn.btn-danger Remove

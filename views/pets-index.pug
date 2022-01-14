@@ -66,6 +66,7 @@ block content
               </div>
             </div>    
             //- END OF STORIES
+            //- POSTS
             <div class="d-flex flex-column mt-4 mb-4">
               each pet, index in pets
                 <div class="card">
@@ -150,6 +151,122 @@ block content
             //-  END OF POSTS CARD
           </div>
           //- END OF COL-8
+
+          //- MESSAGES
+          <div class="col-4">
+            //-  Account
+            <div class="d-flex flex-row justify-content-between">
+              <h5 class="text-muted font-weight-bold pt-1">Account</h5>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sidenav-profile-photo">
+                <i class="fas fa-user-circle fa-3x"></i>
+              </div>
+              <div class="profile-info ml-3">
+                <span class="profile-info-name">noveltea</span>
+              </div>
+            </div>
+
+            //- Messages         
+            <div class="mt-4">
+              <div class="d-flex flex-row justify-content-between">
+                  <h5 class="text-muted font-weight-bold">Messages</h5>
+              </div>
+
+              //- Message 1
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/Logo.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">noveltea</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>Welcome to Noveltea!</small>
+                </div>
+              </div>
+
+              //- Message 2
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/harry.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">potterheads</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>Hi there we noticed you were new! Would you like to join the Potterheads?</small>
+                </div>
+              </div>
+
+              //-  Message 3
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/percy.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">demigods</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>New? Join the Demigods!</small>
+                </div>
+              </div>
+
+              //- Message 4
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/hunger.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">tributes</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>Become a new Tribute today in this District of Noveltea</small>
+                </div>
+              </div>
+
+              //- Message 5
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/maze.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">dasharmy</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>Join the Dashner's Army and learn how to escape the maze!</small>
+                </div>
+              </div>
+
+              //- Message 6
+              <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                    <img src="/images/diver.png" alt="..." width="30", height="30">
+                  </div>
+                    <strong class="ml-3 sugest-username">initiates</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center ml-5">
+                  <small>Become a new recruit now. Join Us!</small>
+                </div>
+              </div>              
+              //- End of messages
+            </div>
+            //- END OF MESSAGES MT-4
+          </div>
+          //- END OF MESSAGES COL-4
         </div>
         //- END OF ROW
       </div>
@@ -158,47 +275,3 @@ block content
     //-  END OF CONTAINER
   <div>
   //- END OF MT-4
-
-
-//- 
-  <div class="d-flex flex-column mt-4 mb-4">
-    .row
-    each pet, index in pets
-      .col-sm-4.justify-content-center
-        .card
-          if pet.avatarUrl
-            img.card-img-top(src=pet.avatarUrl + '-standard.', alt='Card image cap')
-          else
-            img.card-img-top(src=pet.picUrl, alt='Card image cap')
-          .card-body
-            h4.card-title= pet.name
-            small.text-muted= pet.species
-            p.card-text= pet.description
-            .text-right
-                a.card-link(href=`/pets/${pet._id}`) View #{pet.name}
-
-    nav(aria-label='Page navigation example').d-flex.justify-content-center
-    ul.pagination
-      if currentPage > 1
-
-        li.page-item
-          if term
-            a.page-link(href=`?term=${term}&page=${currentPage - 1}`) Previous
-          else
-            a.page-link(href=`?page=${currentPage - 1}`) Previous
-
-      - var i = 1;
-      while i <= pagesCount
-        li.page-item
-          if term
-            a.page-link(href=`?term=${term}&page=${i}`)= i++
-          else
-            a.page-link(href=`?page=${i}`)= i++
-
-      if currentPage < pagesCount
-        li.page-item
-          if term
-            a.page-link(href=`?term=${term}&page=${parseInt(currentPage) + 1}`) Next
-          else
-            a.page-link(href=`?page=${parseInt(currentPage) + 1}`) Next
-    </div>
